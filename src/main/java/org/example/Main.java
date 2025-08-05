@@ -7,18 +7,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner imput = new Scanner(System.in);
-        System.out.println("Digite o nome do produto: ");
+
+        System.out.println("Digite o nome do funcionario: ");
         String nome = imput.nextLine();
 
-        System.out.println("Digite o preço do produto");
-        Double preco = imput.nextDouble();
+        System.out.println("Digite o cargo do funcionario:");
+        String cargo = imput.nextLine();
 
-        System.out.println("Digite a quantidade do produto: ");
-        int qnt = imput.nextInt();
+        System.out.println("Digite o salario do funcionario: ");
+        double salario = imput.nextDouble();
 
-        produtoDAO dao = new produtoDAO();
+        funcionariosDAO dao = new funcionariosDAO();
 
-        dao.inserir(nome, preco, qnt);
-        System.out.println("produto inserido com sucesso");
+        dao.inserir(nome, cargo,salario);
     }
 }

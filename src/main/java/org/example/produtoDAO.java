@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public class produtoDAO {
 
-    public void inserir(String nome, Double preco, int quantidade) {
+    public void inserir(String nome, double preco, int quantidade) {
         String sql = "insert into produtos (nome, preco, quantidade) VALUES (? ,?,?)";
 
         try (Connection conn = Conexao.conectar();
